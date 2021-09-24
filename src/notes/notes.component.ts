@@ -17,4 +17,6 @@ export class NotesComponent implements OnInit {
     this.notes = this.noteService.getNotes();
   }
 
+  
+
 }

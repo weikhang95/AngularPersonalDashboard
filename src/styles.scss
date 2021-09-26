@@ -4,7 +4,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
-@import url('https://fonts.googleapis.com/css?family=Material+Icons+Outlined');
+@import url('https://fonts.googleapis.com/css?family=Material+Icons+Outlined|Material+Icons');
+
 
 html {
     font-family: 'Inter', sans-serif;
@@ -69,6 +70,8 @@ h2.is-bold {
 
 .btns-container {
     display: flex;
+    gap:12px;
+    
     margin-top: 20px;
 
     &.btns-centered {
@@ -85,6 +88,10 @@ h2.is-bold {
     backdrop-filter: blur(2px);
 }
 
+.form-field {
+    margin-bottom: 20px;
+}
+
 .textbox,
 .textarea {
     display: block;
@@ -98,8 +105,6 @@ h2.is-bold {
     background-color: rgba(white, 0.9);
 
     padding: 8px 10px;
-
-    margin-bottom: 20px;
     
     width: 100%;
 
@@ -124,4 +129,8 @@ h2.is-bold {
 .textarea{
     resize: vertical;
     min-height: 100px;
+}
+
+a{
+    text-decoration: none;
 }

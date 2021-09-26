@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Note } from '../shared/note.model';
+import { NoteService } from '../shared/note.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -9,13 +12,20 @@ import { NgForm } from '@angular/forms';
 })
 export class AddNoteComponent implements OnInit {
 
-  constructor() { }
+  constructor(private noteService: NoteService, private router: Router) { }
 
   ngOnInit(): void {
   }
 
   onFormSubmit(form: NgForm) {
     console.log(form)
+    if (form.invalid) return 
+
+    const note = new Note(form.value.title, form.value.content)
+  
+
+    this.noteService.addNote(note)
+    this.router.navigateByUrl("/notes")
   }
 
 }

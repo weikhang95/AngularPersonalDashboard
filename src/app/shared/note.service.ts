@@ -18,7 +18,7 @@ export class NoteService {
   }
 
   getNote(id:string){
-    this.notes.find(n => n.id === id) // return n.id
+    return this.notes.find(n => n.id === id) // return n.id
   }
 
   addNote(note:Note){

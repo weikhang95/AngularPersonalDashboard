@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
@@ -16,6 +16,8 @@ import { EditNoteComponent } from './edit-note/edit-note.component';
 import { TodoItemComponent } from './todo-item/todo-item.component';
 import { AddTodoComponent } from './add-todo/add-todo.component';
 import { EditTodoComponent } from './edit-todo/edit-todo.component';
+import { AddBookmarkComponent } from './add-bookmark/add-bookmark.component';
+import { ManageBookmarksComponent } from './manage-bookmarks/manage-bookmarks.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { EditTodoComponent } from './edit-todo/edit-todo.component';
     EditNoteComponent,
     TodoItemComponent,
     AddTodoComponent,
-    EditTodoComponent
+    EditTodoComponent,
+    AddBookmarkComponent,
+    ManageBookmarksComponent
   ],
   imports: [
     BrowserModule,
@@ -39,6 +43,6 @@ import { EditTodoComponent } from './edit-todo/edit-todo.component';
     FormsModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }

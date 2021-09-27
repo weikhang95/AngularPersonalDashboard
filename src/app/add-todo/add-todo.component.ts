@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { TodoService } from '../shared/todo.service';
-import { NgForm } from '../../../node_modules/@angular/forms';
+import { NgForm } from '@angular/forms';
 import { Todo } from '../shared/todo.model';
-import { Router } from '../../../node_modules/@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-todo',

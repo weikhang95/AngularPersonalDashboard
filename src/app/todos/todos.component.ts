@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { TodoService } from '../shared/todo.service';
 import { Todo } from '../shared/todo.model';
-import { Router } from '../../../node_modules/@angular/router';
-import { trigger, transition, animate, style } from '../../../node_modules/@angular/animations';
+import { Router } from '@angular/router';
+import { trigger, transition, animate, style } from '@angular/animations';
 
 @Component({
   selector: 'app-todos',

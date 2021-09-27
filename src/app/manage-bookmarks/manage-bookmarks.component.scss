@@ -13,6 +13,8 @@
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
 
+    overflow: auto;
+
 }
 
 .sidebar-heading {
@@ -30,9 +32,42 @@
 }
 
 .sidebar-item {
+    position: relative;
     color: rgba(white, 0.78);
 
+    font-size: 18px;
+
     padding: 5px 25px;
+
+    &:hover {
+        color: rgba(white, 0.85);
+    }
+
+    &.selected {
+        color:rgba(white, 0.95);
+    }
+}
+
+.sidebar-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 2px;
+    background-color: rgba(white, 0.8);
+
+    transition: 0.2s; 
+
+    // hide by default 
+    opacity: 0;
+
+    transform: scaleY(0);
+}
+
+.sidebar-item.selected::before {
+    opacity: 1;
+    transform: scaleY(1);
 }
 
 .content {
@@ -40,4 +75,6 @@
 
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
+
+    overflow: auto;
 }

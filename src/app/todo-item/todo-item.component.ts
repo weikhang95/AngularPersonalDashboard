@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Todo } from '../shared/todo.model'; 
-import { Router } from '../../../node_modules/@angular/router';
+import { Router } from '@angular/router';
 
 
 @Component({

@@ -40,7 +40,9 @@ export class EditBookmarkComponent implements OnInit {
 
   delete() {
     this.bookmarkService.deletebookmark(this.bookmark.id)
-     this.router.navigate(['../'], { relativeTo: this.route})
+    this.router.navigate(['../'], { relativeTo: this.route})
+
+    this.notificationService.show('Deleted bookmark!')
   }
 
 }

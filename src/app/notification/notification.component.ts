@@ -14,7 +14,7 @@ import { NotificationData } from '../shared/notification-data.model';
           opacity: 0,
           transform: 'translateY(5px)'
         }),
-        animate('150ms ease-out')
+        animate('150ms 125ms ease-out')
       ]),
       transition(':leave', [
         animate(125, style({
@@ -27,7 +27,7 @@ import { NotificationData } from '../shared/notification-data.model';
 })
 export class NotificationComponent implements OnInit {
 
-  notification: NotificationData
+  notification: NotificationData[]
 
   timeout: any
 
@@ -35,13 +35,13 @@ export class NotificationComponent implements OnInit {
 
   ngOnInit(): void {
     this.notificationService.notifications.subscribe((notification: NotificationData) => {
-      this.notification = notification
+      this.notification = Array(notification)
 
       clearTimeout(this.timeout)
 
       this.timeout = setTimeout(() => {
         this.notification = null
-      }, this.notification.duration)
+      }, notification.duration)
     })
   }
 
